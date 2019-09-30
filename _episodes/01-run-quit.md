@@ -26,13 +26,13 @@ emulated in many other environments, such as IDEs.
 $ ipython
 ```
 and you should see a prompt like this, but more colorful:
-```
+~~~
 Python 3.6.6 (default, Sep 19 2018, 12:51:03)
 Type 'copyright', 'credits' or 'license' for more information
 IPython 6.5.0 -- An enhanced Interactive Python. Type '?' for help. 
 
 In [1]: 
-```
+~~~
 
 - To exit the `ipython`, type `exit` and hit enter.
 
