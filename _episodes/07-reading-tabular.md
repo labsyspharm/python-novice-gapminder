@@ -31,7 +31,7 @@ keypoints:
 import pandas as pd
 
 data = pd.read_csv('data/gapminder_gdp_oceania.csv')
-print(data)
+data
 ~~~
 {: .language-python}
 ~~~
@@ -79,7 +79,7 @@ print(data)
 
 ~~~
 data = pd.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
-print(data)
+data
 ~~~
 {: .language-python}
 ~~~
@@ -141,7 +141,7 @@ memory usage: 208.0+ bytes
 *   Called a *member variable*, or just *member*.
 
 ~~~
-print(data.columns)
+data.columns
 ~~~
 {: .language-python}
 ~~~
@@ -159,7 +159,7 @@ Index(['gdpPercap_1952', 'gdpPercap_1957', 'gdpPercap_1962', 'gdpPercap_1967',
 *   Like `columns`, it is a member variable.
 
 ~~~
-print(data.T)
+data.T
 ~~~
 {: .language-python}
 ~~~
@@ -184,7 +184,7 @@ gdpPercap_2007  34435.36744  25185.00911
 DataFrame.describe() gets the summary statistics of only the columns that have numerical data. 
 All other columns are ignored, unless you use the argument `include='all'`.
 ~~~
-print(data.describe())
+data.describe()
 ~~~
 {: .language-python}
 ~~~
