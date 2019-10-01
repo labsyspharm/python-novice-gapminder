@@ -29,7 +29,7 @@ keypoints:
 
 ## Python can be used as a simple calculator
 
-*   The usual mathematical operations are supported
+*   The usual mathematical operations are supported (we will go into more detail on this later)
 *   Two main kinds of number: `int` for integers, and `float` for numbers with decimals.
 *   Exponents use `**`
 
@@ -72,7 +72,8 @@ OUt[8]: 'hellohellohello'
 {: .language-python}
 
 *   Operations are generally intuitive.
-*   Some do not work because they do not make sense
+*   Some do not work because they do not make sense (we will discuss this more
+   [here](https://labsyspharm.github.io/python-novice-gapminder/03-types-conversion/index.html#type-control-operations))
 
 ~~~
 In [9]: 'hello' + 3

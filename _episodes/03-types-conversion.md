@@ -35,6 +35,27 @@ keypoints:
     *   But remember: the *value* has the type --- the *variable* is just a label.
 
 ~~~
+type(52)
+~~~
+{: .language-python}
+~~~
+int
+~~~
+{: .output}
+
+~~~
+fitness = 'average'
+type(fitness)
+~~~
+{: .language-python}
+~~~
+str
+~~~
+{: .output}
+
+* If you print a type, you get a representation of the result:
+
+~~~
 print(type(52))
 ~~~
 {: .language-python}
@@ -43,22 +64,13 @@ print(type(52))
 ~~~
 {: .output}
 
-~~~
-fitness = 'average'
-print(type(fitness))
-~~~
-{: .language-python}
-~~~
-<class 'str'>
-~~~
-{: .output}
 
-## Types control what operations (or methods) can be performed on a given value.
+## <a name='type-control-operations'></a> Types control what operations (or methods) can be performed on a given value.
 
 *   A value's type determines what the program can do to it.
 
 ~~~
-print(5 - 3)
+5 - 3
 ~~~
 {: .language-python}
 ~~~
@@ -67,7 +79,7 @@ print(5 - 3)
 {: .output}
 
 ~~~
-print('hello' - 'h')
+'hello' - 'h'
 ~~~
 {: .language-python}
 ~~~
@@ -85,12 +97,11 @@ TypeError: unsupported operand type(s) for -: 'str' and 'str'
 *   "Adding" character strings concatenates them.
 
 ~~~
-full_name = 'Ahmed' + ' ' + 'Walsh'
-print(full_name)
+'Ahmed' + ' ' + 'Walsh'
 ~~~
 {: .language-python}
 ~~~
-Ahmed Walsh
+'Ahmed Walsh'
 ~~~
 {: .output}
 
@@ -99,11 +110,11 @@ Ahmed Walsh
 
 ~~~
 separator = '=' * 10
-print(separator)
+separator
 ~~~
 {: .language-python}
 ~~~
-==========
+'=========='
 ~~~
 {: .output}
 
@@ -112,7 +123,7 @@ print(separator)
 *   The built-in function `len` counts the number of characters in a string.
 
 ~~~
-print(len(full_name))
+len(full_name)
 ~~~
 {: .language-python}
 ~~~
@@ -123,7 +134,7 @@ print(len(full_name))
 *   But numbers don't have a length (not even zero).
 
 ~~~
-print(len(52))
+len(52)
 ~~~
 {: .language-python}
 ~~~
@@ -141,7 +152,7 @@ TypeError: object of type 'int' has no len()
 *   Cannot add numbers and strings.
 
 ~~~
-print(1 + '2')
+1 + '2'
 ~~~
 {: .language-python}
 ~~~
@@ -158,15 +169,13 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'
 *   Some types can be converted to other types by using the type name as a function.
 
 ~~~
-print(1 + int('2'))
-print(str(1) + '2')
+In [1]: 1 + int('2')
+Out[1]: 3
+
+In [2]: str(1) + '2'
+Out[2]: '12'
 ~~~
 {: .language-python}
-~~~
-3
-12
-~~~
-{: .output}
 
 ## Can mix integers and floats freely in operations.
 
@@ -174,34 +183,34 @@ print(str(1) + '2')
     *   Python 3 automatically converts integers to floats as needed. (Integer division in Python 2 will return an integer, the *floor* of the division.)
 
 ~~~
-print('half is', 1 / 2.0)
-print('three squared is', 3.0 ** 2)
+In [3]: 1 / 2.0
+Out[3]: 0.5
+
+In [4]: 3.0 ** 2
+Out[4]: 9.0
+
+In [5]: 3 ** 2
+Out[5[: 9
 ~~~
 {: .language-python}
-~~~
-half is 0.5
-three squared is 9.0
-~~~
-{: .output}
 
 ## Variables only change value when something is assigned to them.
 
-*   If we make one cell in a spreadsheet depend on another,
-    and update the latter,
-    the former updates automatically.
+*   If we make an operation in one cell in a spreadsheet depend on another,
+    and update the latter, the former updates automatically.
 *   This does **not** happen in programming languages.
 
 ~~~
-first = 1
-second = 5 * first
-first = 2
-print('first is', first, 'and second is', second)
-~~~
-{: .language-python}
-~~~
+In [1]: first = 1
+
+In [2]: second = 5 * first
+
+In [3]: first = 2
+
+In [4]: print('first is', first, 'and second is', second)
 first is 2 and second is 5
 ~~~
-{: .output}
+{: .language-python}
 
 *   The computer reads the value of `first` when doing the multiplication,
     creates a new value, and assigns it to `second`.
@@ -217,11 +226,11 @@ first is 2 and second is 5
 > > It is a floating-point number (often abbreviated "float").
 > >
 > > ~~~
-> > print(type(3.4))
+> > type(3.4)
 > > ~~~
 > > {: .language-python}
 > > ~~~
-> > <class 'float'>
+> > float
 > > ~~~
 > > {: .output}
 > {: .solution}
@@ -334,21 +343,18 @@ first is 2 and second is 5
 > and `int()` will convert a floating point number to an integer:
 >
 > ~~~
-> print("string to float:", float("3.4"))
-> print("float to int:", int(3.4))
+> In [1]: float("3.4")
+> Out[1]: 3.4
+>
+> In [2]: int(3.4)
+> Out[2]: 3
 > ~~~
 > {: .language-python}
->
-> ~~~
-> string to float: 3.4
-> float to int: 3
-> ~~~
-> {: .output}
 >
 > If the conversion doesn't make sense, however, an error message will occur
 >
 > ~~~
-> print("string to float:", float("Hello world!"))
+> In [5]: float("Hello world!")
 > ~~~
 > {: .language-python}
 >
@@ -369,7 +375,7 @@ first is 2 and second is 5
 > Why do you think it does that?
 >
 > ~~~
-> print("fractional string to int:", int("3.4"))
+> int("3.4")
 > ~~~
 > {: .language-python}
 > 
@@ -433,17 +439,15 @@ first is 2 and second is 5
 > as `val.real` and `val.imag`.
 >
 > ~~~
-> complex = 6 + 2j
-> print(complex.real)
-> print(complex.imag)
+> In [1]: complex = 6 + 2j
+>
+> In [2]: complex.real
+> Out[2]: 6.0
+>
+> In [3]: complex.imag
+> Out[3]: 2.0
 > ~~~
 > {: .language-python}
->
-> ~~~
-> 6.0
-> 2.0
-> ~~~
-> {: .output}
 >
 >
 > 1.  Why do you think Python uses `j` instead of `i` for the imaginary part?
