@@ -19,6 +19,14 @@ keypoints:
 - "Python is case-sensitive."
 - "Use meaningful variable names."
 ---
+## Python is a programming Language
+
+*   Bash is another programming language, used for the shell
+*   Like Bash, python operates on the *read-evaulate-print loop* (REPL). When you enter an expression,
+    python reads your code, evaulates and executes it, prints the output, and then loops back to the next
+    line or block of code.
+
+
 ## Python can be used as a simple calculator
 
 *   The usual mathematical operations are supported
