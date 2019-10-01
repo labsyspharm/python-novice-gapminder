@@ -1,5 +1,5 @@
 ---
-title: "Wrap-Up"
+title: "Lunch"
 teaching: 20
 exercises: 0
 questions:
