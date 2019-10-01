@@ -9,8 +9,8 @@ objectives:
 - "Correctly trace value changes in programs that use scalar assignment."
 keypoints:
 - "Use variables to store values."
-- "Use `print` to display values."
-- "Variables persist between cells."
+- "Values are displayed as output."
+- "Use `print` to render strings."
 - "Variables must be created before they are used."
 - "Variables can be used in calculations."
 - "Use an index to get a single character from a string."
