@@ -45,13 +45,19 @@ keypoints:
 ~~~
 import math
 
-print('pi is', math.pi)
-print('cos(pi) is', math.cos(math.pi))
+math.pi
 ~~~
 {: .language-python}
 ~~~
-pi is 3.141592653589793
-cos(pi) is -1.0
+3.141592653589793
+~~~
+{: .output}
+~~~
+math.cos(math.pi)
+~~~
+{: .language-python}
+~~~
+-1.0
 ~~~
 {: .output}
 
@@ -101,11 +107,11 @@ FUNCTIONS
 ~~~
 from math import cos, pi
 
-print('cos(pi) is', cos(pi))
+cos(pi)
 ~~~
 {: .language-python}
 ~~~
-cos(pi) is -1.0
+-1.0
 ~~~
 {: .output}
 
@@ -117,11 +123,11 @@ cos(pi) is -1.0
 ~~~
 import math as m
 
-print('cos(pi) is', m.cos(m.pi))
+m.cos(m.pi)
 ~~~
 {: .language-python}
 ~~~
-cos(pi) is -1.0
+-1.0
 ~~~
 {: .output}
 
@@ -133,12 +139,12 @@ cos(pi) is -1.0
 > ## Exploring the Math Module
 >
 > 1. What function from the `math` module can you use to calculate a square root
->    *without* using `sqrt`?
+>    *without* using `sqrt` (Hint: You could also avoid the `math` module entirely)?
 > 2. Since the library contains this function, why does `sqrt` exist?
 >
 > > ## Solution
 > > 1. Using `help(math)` we see that we've got `pow(x,y)` in addition to `sqrt(x)`,
-> >    so we could use `pow(x, 0.5)` to find a square root.
+> >    so we could use `pow(x, 0.5)` or `x**0.5` to find a square root.
 > > 2. The `sqrt(x)` function is arguably more readable than `pow(x, 0.5)` when
 > >    implementing equations. Readability is a cornerstone of good programming, so it
 > >    makes sense to provide a special function for this specific common case.
@@ -176,7 +182,7 @@ cos(pi) is -1.0
 > > from random import randrange
 > >
 > > random_index = randrange(len(bases))
-> > print(bases[random_index])
+> > bases[random_index]
 > > ~~~
 > > {: .language-python}
 > >
@@ -185,7 +191,7 @@ cos(pi) is -1.0
 > > ~~~
 > > from random import randrange
 > >
-> > print(bases[randrange(len(bases))])
+> > bases[randrange(len(bases))]
 > > ~~~
 > > {: .language-python}
 > >
@@ -195,7 +201,7 @@ cos(pi) is -1.0
 > > ~~~
 > > from random import sample
 > >
-> > print(sample(bases, 1)[0])
+> > sample(bases, 1)[0]
 > > ~~~
 > > {: .language-python}
 > >
@@ -298,13 +304,13 @@ cos(pi) is -1.0
 
 > ## There Are Many Ways To Import Libraries!
 >
-> Match the following print statements with the appropriate library calls.
+> Match the following statements with the appropriate library calls.
 >
-> Print commands:
+> Commands:
 >
-> 1. `print("sin(pi/2) =", sin(pi/2))`
-> 2. `print("sin(pi/2) =", m.sin(m.pi/2))`
-> 3. `print("sin(pi/2) =", math.sin(math.pi/2))`
+> 1. `sin(pi/2)`
+> 2. `m.sin(m.pi/2)`
+> 3. `math.sin(math.pi/2)`
 >
 > Library calls:
 >
@@ -337,7 +343,7 @@ cos(pi) is -1.0
 > ~~~
 > ____ math import ____, ____
 > angle = degrees(pi / 2)
-> print(angle)
+> angle
 > ~~~
 > {: .language-python}
 >
@@ -346,7 +352,7 @@ cos(pi) is -1.0
 > > ~~~
 > > from math import degrees, pi
 > > angle = degrees(pi / 2)
-> > print(angle)
+> > angle
 > > ~~~
 > > {: .language-python}
 > >
