@@ -46,7 +46,7 @@ uniquely identifies its *entry* in the DataFrame.
 ~~~
 import pandas as pd
 data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
-print(data.iloc[0, 0])
+data.iloc[0, 0]
 ~~~
 {: .language-python}
 ~~~
@@ -60,7 +60,7 @@ print(data.iloc[0, 0])
 
 ~~~
 data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
-print(data.loc["Albania", "gdpPercap_1952"])
+data.loc["Albania", "gdpPercap_1952"]
 ~~~
 {: .language-python}
 ~~~
@@ -72,7 +72,7 @@ print(data.loc["Albania", "gdpPercap_1952"])
 *   Just like Python's usual slicing notation.
 
 ~~~
-print(data.loc["Albania", :])
+data.loc["Albania", :]
 ~~~
 {: .language-python}
 ~~~
@@ -95,7 +95,7 @@ Name: Albania, dtype: float64
 *   Would get the same result printing `data.loc["Albania"]` (without a second index).
 
 ~~~
-print(data.loc[:, "gdpPercap_1952"])
+data.loc[:, "gdpPercap_1952"]
 ~~~
 {: .language-python}
 ~~~
@@ -117,7 +117,7 @@ Name: gdpPercap_1952, dtype: float64
 ## Select multiple columns or rows using `DataFrame.loc` and a named slice.
 
 ~~~
-print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'])
+data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972']
 ~~~
 {: .language-python}
 ~~~
@@ -144,7 +144,7 @@ everything up to but not including the final index.
 *   E.g., calculate max of a slice.
 
 ~~~
-print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].max())
+data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].max()
 ~~~
 {: .language-python}
 ~~~
@@ -156,7 +156,7 @@ dtype: float64
 {: .output}
 
 ~~~
-print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].min())
+data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].min()
 ~~~
 {: .language-python}
 ~~~
@@ -175,14 +175,10 @@ dtype: float64
 ~~~
 # Use a subset of data to keep output readable.
 subset = data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972']
-print('Subset of data:\n', subset)
-
-# Which values were greater than 10000 ?
-print('\nWhere are values large?\n', subset > 10000)
+subset
 ~~~
 {: .language-python}
 ~~~
-Subset of data:
              gdpPercap_1962  gdpPercap_1967  gdpPercap_1972
 country
 Italy           8243.582340    10022.401310    12269.273780
@@ -190,8 +186,15 @@ Montenegro      4649.593785     5907.850937     7778.414017
 Netherlands    12790.849560    15363.251360    18794.745670
 Norway         13450.401510    16361.876470    18965.055510
 Poland          5338.752143     6557.152776     8006.506993
+~~~
+{: .output}
 
-Where are values large?
+~~~
+# Which values were greater than 10000 ?
+subset > 10000
+~~~
+{: .language-python}
+~~~
             gdpPercap_1962 gdpPercap_1967 gdpPercap_1972
 country
 Italy                False           True           True
@@ -208,7 +211,7 @@ Poland               False          False          False
 
 ~~~
 mask = subset > 10000
-print(subset[mask])
+subset[mask]
 ~~~
 {: .language-python}
 ~~~
@@ -226,7 +229,7 @@ Poland                  NaN             NaN             NaN
 *   Useful because NaNs are ignored by operations like max, min, average, etc.
 
 ~~~
-print(subset[subset > 10000].describe())
+subset[subset > 10000].describe()
 ~~~
 {: .language-python}
 ~~~
@@ -344,7 +347,7 @@ data.groupby(wealth_score).sum()
 > > ## Solution
 > > The selection can be done by using the labels for both the row ("Serbia") and the column ("gdpPercap_2007"):
 > > ~~~
-> > print(df.loc['Serbia', 'gdpPercap_2007'])
+> > df.loc['Serbia', 'gdpPercap_2007']
 > > ~~~
 > > {: .language-python}
 > > The output is
@@ -362,8 +365,12 @@ data.groupby(wealth_score).sum()
 >     what rule governs what is included (or not) in numerical slices and named slices in Pandas?
 > 
 > ~~~
-> print(df.iloc[0:2, 0:2])
-> print(df.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
+> df.iloc[0:2, 0:2]
+> ~~~
+> {: .language-python}
+> and
+> ~~~
+> df.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962']
 > ~~~
 > {: .language-python}
 > 
@@ -457,8 +464,8 @@ data.groupby(wealth_score).sum()
 >
 > ~~~
 > data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
-> print(data.idxmin())
-> print(data.idxmax())
+> data.idxmin()
+> data.idxmax()
 > ~~~
 > {: .language-python}
 {: .challenge}

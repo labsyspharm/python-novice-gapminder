@@ -18,10 +18,8 @@ keypoints:
 ## [`matplotlib`](https://matplotlib.org/) is the most widely used scientific plotting library in Python.
 
 *   Commonly use a sub-library called [`matplotlib.pyplot`](https://matplotlib.org/api/pyplot_api.html).
-*   The Jupyter Notebook will render plots inline if we ask it to using a "magic" command.
 
 ~~~
-%matplotlib inline
 import matplotlib.pyplot as plt
 ~~~
 {: .language-python}
@@ -221,8 +219,8 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > ~~~
 > data_asia = pd.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
 > data_asia.max().plot()
-> print(data_asia.idxmax())
-> print(data_asia.idxmin())
+> data_asia.idxmax()
+> data_asia.idxmin()
 > ~~~
 > {: .language-python}
 > > ## Solution
