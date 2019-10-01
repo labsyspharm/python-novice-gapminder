@@ -65,12 +65,19 @@ after
     *   "Larger" and "smaller" use (0-9, A-Z, a-z) to compare letters.
 
 ~~~
-print(max(1, 2, 3))
-print(min('a', 'A', '0'))
+max(1, 2, 3)
 ~~~
 {: .language-python}
 ~~~
 3
+~~~
+{: .output}
+
+~~~
+min('a', 'A', '0')
+~~~
+{: .language-python}
+~~~
 0
 ~~~
 {: .output}
@@ -82,7 +89,7 @@ print(min('a', 'A', '0'))
 *   And they must be given things that can meaningfully be compared.
 
 ~~~
-print(max(1, 'a'))
+max(1, 'a')
 ~~~
 {: .language-python}
 ~~~
@@ -137,6 +144,21 @@ round(number, ndigits=None)
     the return value has the same type as the number.  ndigits may be negative.
 ~~~
 {: .output}
+
+*   Similarly, in IPython, you can type the name of a function and then a `?` to
+    print a help message
+
+~~~
+In [1]: round?
+Docstring:
+round(number[, ndigits]) -> number
+
+Round a number to a given precision in decimal digits (default 0 digits).
+This returns an int when called with one argument, otherwise the
+same type as the number. ndigits may be negative.
+Type:      builtin_function_or_method
+~~~
+{: .language-python}
 
 ## Python reports a syntax error when it can't understand the source of a program.
 
@@ -210,14 +232,6 @@ NameError: name 'aege' is not defined
 
 *   Fix syntax errors by reading the source and runtime errors by tracing execution.
 
-## The Jupyter Notebook has two ways to get help.
-
-*   Place the cursor anywhere in the function invocation 
-    (i.e., the function name or its parameters),
-    hold down `shift`,
-    and press `tab`.
-*   Or type a function name with a question mark after it.
-
 ## Every function returns something.
 
 *   Every function call produces some result.
@@ -225,15 +239,22 @@ NameError: name 'aege' is not defined
     it usually returns the special value `None`.
 
 ~~~
-result = print('example')
-print('result of print is', result)
+In [1]: result = print('example')
+example
+
+In [2]: result
+Out[2]: None
 ~~~
 {: .language-python}
+
+*   Notice that the thing returned from a function will be displayed in Out unless it is
+    `None`.
+
 ~~~
-example
-result of print is None
+In [1]: max(1, 2, 3)
+Out[1]: 3
 ~~~
-{: .output}
+{: .language-python}
 
 > ## What Happens When
 >
