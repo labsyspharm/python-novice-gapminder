@@ -3,13 +3,10 @@ title: "Running and Quitting"
 teaching: 5
 exercises: 0
 questions:
-- "How can I run Python programs?"
+- "How can I run Python code?"
 objectives:
 - "Run the `ipython` command prompt."
-- "Write a python file."
-- "Execute a python file, both in the script and out."
 keypoints:
-- "Python scripts are plain text files."
 - "Use the `ipython` for editing and running Python."
 ---
 
