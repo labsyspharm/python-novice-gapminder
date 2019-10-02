@@ -103,7 +103,7 @@ plt.legend()
 ~~~
 {: .language-python}
 
-## [Lists]({{ page.root }}/11-lists/)
+## [Lists]({{ page.root }}/12-lists/)
 - Defined within `[...]` and separated by `,`.
   - An empty list can be created by using `[]`.
 - Can use `len(...)` to determine how many values are in a list.
@@ -113,7 +113,7 @@ plt.legend()
 - To combine two lists use `list_name_1.extend(list_name_2)`.
 - To remove an item from a list use `del list_name[index]`.
 
-## [For Loops]({{ page.root }}/12-for-loops/)
+## [For Loops]({{ page.root }}/13-for-loops/)
 - Start a for loop with `for number in [1,2,3]:`, with the following lines indented.
   - `[1, 2, 3]` is considered the collection.
   - `number` is the loop variable.
@@ -126,7 +126,7 @@ for number in range(0,5):
 ~~~
 {: .language-python}
 
-## [Looping Over Data Sets]({{ page.root }}/13-looping-data-sets/)
+## [Looping Over Data Sets]({{ page.root }}/14-looping-data-sets/)
 - Use a for loop: `for filename in [file1, file2]:`
 - To find a set of files using a pattern use `glob.glob`
   - Must import first using `import glob`.
@@ -141,7 +141,7 @@ for filename in glob.glob(*.txt):
 ~~~
 {: .language-python}
 
-## [Writing Functions]({{ page.root }}/14-writing-functions/)
+## [Writing Functions]({{ page.root }}/15-writing-functions/)
 - Define a function using `def function_name(parameters):`. Replace `parameters` with the variables to use when the function is executed.
 - Run by using `function_name(parameters)`.
 - To return a result to the caller use `return ...` in the function.
@@ -155,11 +155,11 @@ add_numbers(1, 4)
 ~~~
 {: .language-python}
 
-## [Variable Scope]({{ page.root }}/15-scope/)
+## [Variable Scope]({{ page.root }}/16-scope/)
 - A local variable is defined in a function and can only be seen and used within that function.
 - A global variable is defined outside of a function and can be seen or used anywhere after definition.
 
-## [Conditionals]({{ page.root }}/17-conditionals/)
+## [Conditionals]({{ page.root }}/18-conditionals/)
 - Defined similarly to a loop, using `if variable conditional value:`.
   - For example, `if variable > 5:`.
 - Use `elif:` for additional tests.
@@ -184,7 +184,7 @@ for m in [3, 6, 7, 2, 8]:
 ~~~
 {: .language-python}
 
-## [Programming Style]({{ page.root }}/18-style/)
+## [Programming Style]({{ page.root }}/19-style/)
 - Document your code.
 - Use clear and meaningful variable names.
 - Follow [the PEP8 style guide](https://www.python.org/dev/peps/pep-0008) when setting up your code.

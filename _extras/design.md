@@ -252,9 +252,13 @@ I know...
     *   Modify the example to create a scatter plot of GDP per capita in Asian countries.
     *   Explain what each argument to `plot` does in the following example.
 
-### [Lunch]({{page.root}}/10-lunch/) (12:15): 45 min
+### [Scripts]({{page.root}}/10-scripts/) (12:00)
 
-### [Lists]({{page.root}}/11-lists/) (13:00)
+*   Minimal time to show students how to create a python script
+
+### [Lunch]({{page.root}}/11-lunch/) (12:15): 45 min
+
+### [Lists]({{page.root}}/12-lists/) (13:00)
 
 *   Teaching: 10 min
     *   Explain why programs need collections of values.
@@ -268,7 +272,7 @@ I know...
     *   What are the differences between sorting these two ways?
     *   What is the difference between `new = old` and `new = old[:]`?
 
-### [Loops]({{page.root}}/12-for-loops/) (13:20)
+### [Loops]({{page.root}}/13-for-loops/) (13:20)
 
 *   Teaching: 10 min
     *   Explain what for loops are normally used for.
@@ -281,7 +285,7 @@ I know...
     *   Fill in the blanks in this series of examples to get practice accumulating values.
     *   Reorder and indent these lines to calculate the cumulative sum of the list values.
 
-### [Looping Over Data Sets]({{page.root}}/13-looping-data-sets/) (13:45)
+### [Looping Over Data Sets]({{page.root}}/14-looping-data-sets/) (13:45)
 
 *   Teaching: 5 min
     *   Be able to read and write globbing expressions that match sets of files.
@@ -292,7 +296,7 @@ I know...
     *   Modify this program so that it prints the number of records in the shortest file.
     *   Write a program that reads and plots all of the regional data sets.
 
-### [Writing Functions]({{page.root}}/14-writing-functions/) (14:00)
+### [Writing Functions]({{page.root}}/15-writing-functions/) (14:00)
 
 *   Teaching: 10 min
     *   Explain and identify the difference between function definition and function call.
@@ -306,7 +310,7 @@ I know...
     *   Why is it sometimes useful to pass arguments by naming the corresponding parameters?
     *   Fill in the blanks and turn this short piece of code into a function.
 
-### [Variable Scope]({{page.root}}/15-scope/) (14:25)
+### [Variable Scope]({{page.root}}/16-scope/) (14:25)
 
 *   Teaching: 10 min
     *   Identify local and global variables.
@@ -316,9 +320,9 @@ I know...
     *   Trace the changes to the values in this program,
         being careful to distinguish local from global values.
 
-### [Coffee]({{page.root}}/16-coffee/) (14:45): 15 min
+### [Coffee]({{page.root}}/17-coffee/) (14:45): 15 min
 
-### [Conditionals]({{page.root}}/17-conditionals/) (15:00)
+### [Conditionals]({{page.root}}/18-conditionals/) (15:00)
 
 *   Teaching: 10 min
     *   Correctly write programs that use if and else statements and simple Boolean expressions (without logical operators).
@@ -330,7 +334,7 @@ I know...
     *   Modify this program so that it always finds the largest and smallest values in a list
         no matter what the list's values are.
 
-### [Programming Style]({{page.root}}/18-style/) (15:25)
+### [Programming Style]({{page.root}}/19-style/) (15:25)
 
 *   Teaching: 15 min
     *   How can I make my programs more readable?
@@ -341,14 +345,14 @@ I know...
     *   Turn the comments in this program into docstrings.
     *   Rewrite this short program to be more readable.
 
-### [Wrap-Up]({{page.root}}/19-wrap/) (15:55)
+### [Wrap-Up]({{page.root}}/20-wrap/) (15:55)
 
 *   Teaching: 20 min
     *   Name and locate scientific Python community sites for software, workshops, and help.
 *   Challenges: 0 min
     *   None.
 
-### [Feedback]({{page.root}}/20-feedback/) (16:15)
+### [Feedback]({{page.root}}/21-feedback/) (16:15)
 
 *   Teaching: 0 min
 *   Challenges: 15 min
